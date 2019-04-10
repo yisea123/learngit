@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdtprojectproperties>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.IncludePaths">
+<language name="s">
+
+</language>
+<language name="c,S">
+
+<includepath>MOTION_LIB/Motion</includepath>
+
+</language>
+<language name="Object File">
+
+</language>
+<language name="ld">
+
+</language>
+</section>
+</cdtprojectproperties>

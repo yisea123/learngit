@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdtprojectproperties>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.IncludePaths">
+<language name="s">
+
+</language>
+<language name="c,S">
+<includepath>ZYNQ_LIB</includepath>
+<includepath>ZYNQ_LIB/uCOS/uCOS-III</includepath>
+<includepath>ZYNQ_LIB/uCOS/uCOS-III/Source</includepath>
+<includepath>ZYNQ_LIB/uCOS/uCOS-III/Cfg/Template</includepath>
+<includepath>ZYNQ_LIB/uCOS/uCOS-III/Ports/ARM-Cortex-A/Generic/GNU</includepath>
+<includepath>ZYNQ_LIB/uCOS/uC-CPU</includepath>
+<includepath>ZYNQ_LIB/uCOS/uC-CPU/Cfg/Template</includepath>
+<includepath>ZYNQ_LIB/uCOS/uC-CPU/ARM-Cortex-A/GNU</includepath>
+<includepath>ZYNQ_LIB/uCOS/uC-LIB</includepath>
+<includepath>ZYNQ_LIB/uCOS/uC-LIB/Cfg/Template</includepath>
+<includepath>ZYNQ_LIB/BaseInc</includepath>
+<includepath>ZYNQ_LIB/Peripherals</includepath>
+<includepath>ZYNQ_LIB/lwip</includepath>
+<includepath>ZYNQ_LIB/lwip/ipv4</includepath>
+
+</language>
+<language name="Object File">
+
+</language>
+<language name="ld">
+
+</language>
+</section>
+</cdtprojectproperties>

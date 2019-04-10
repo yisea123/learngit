@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug-offline|Win32">
+      <Configuration>Debug-offline</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{78A5EC2E-F3AF-4184-B959-63C8B040E053}</ProjectGuid>
+    <RootNamespace>Spring</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <ProjectName>Spring</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-offline|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug-offline|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(MSBuildProjectDirectory)\sqlite3;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-offline|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(MSBuildProjectDirectory)\sqlite3;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(ProjectName);$(SolutionDir)..\Spring_Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Manifest>
+      <EnableDPIAwareness>false</EnableDPIAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-offline|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_DEBUG_OFFLINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(ProjectName);$(SolutionDir)..\Spring_Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Manifest>
+      <EnableDPIAwareness>false</EnableDPIAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(ProjectName);$(SolutionDir)..\Spring_Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>uafxcw.lib;LIBCMT.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>uafxcw.lib;LIBCMT.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Manifest>
+      <EnableDPIAwareness>false</EnableDPIAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\icons-probe\chanxian_0.ico" />
+    <None Include="res\icons-probe\chanxian_1.ico" />
+    <None Include="res\icons-probe\checkbox_checked.ico" />
+    <None Include="res\icons-probe\checkbox_unchecked.ico" />
+    <None Include="res\icons-probe\duanxian_0.ico" />
+    <None Include="res\icons-probe\duanxian_1.ico" />
+    <None Include="res\icons-probe\io_status_0.ico" />
+    <None Include="res\icons-probe\io_status_1.ico" />
+    <None Include="res\icons-probe\logic_false.ico" />
+    <None Include="res\icons-probe\logic_true.ico" />
+    <None Include="res\icons-probe\paoxian_0.ico" />
+    <None Include="res\icons-probe\paoxian_1.ico" />
+    <None Include="res\icons-probe\probe_status_0.ico" />
+    <None Include="res\icons-probe\probe_status_1.ico" />
+    <None Include="res\icons-probe\stop_extern_0.ico" />
+    <None Include="res\icons-probe\stop_extern_1.ico" />
+    <None Include="res\icons-probe\stop_handmove_0.ico" />
+    <None Include="res\icons-probe\stop_handmove_1.ico" />
+    <None Include="res\icons-top\backknife.ico" />
+    <None Include="res\icons-top\backzero.ico" />
+    <None Include="res\icons-top\checkio.ico" />
+    <None Include="res\icons-top\cutwire.ico" />
+    <None Include="res\icons-top\danbu.ico" />
+    <None Include="res\icons-top\danbu_off.ico" />
+    <None Include="res\icons-top\fileopen.ico" />
+    <None Include="res\icons-top\filesave.ico" />
+    <None Include="res\icons-top\handmove-off.ico" />
+    <None Include="res\icons-top\handmove.ico" />
+    <None Include="res\icons-top\icon2.ico" />
+    <None Include="res\icons-top\models.ico" />
+    <None Include="res\icons-top\reset-alarm.ico" />
+    <None Include="res\icons-top\set-origin.ico" />
+    <None Include="res\icons-top\single.ico" />
+    <None Include="res\icons-top\start.ico" />
+    <None Include="res\icons-top\stop.ico" />
+    <None Include="res\icons-top\test-off.ico" />
+    <None Include="res\icons-top\test.ico" />
+    <None Include="res\icons-top\work-speed.ico" />
+    <None Include="res\images\model1.bmp" />
+    <None Include="res\images\model2.bmp" />
+    <None Include="res\images\model3.bmp" />
+    <None Include="res\images\model4.bmp" />
+    <None Include="res\images\sample.bmp" />
+    <None Include="res\Spring.ico" />
+    <None Include="res\Spring.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Spring_Public\Dog_public.h" />
+    <ClInclude Include="..\..\Spring_Public\ManualMotion.h" />
+    <ClInclude Include="..\..\Spring_Public\modbusAddress.h" />
+    <ClInclude Include="..\..\Spring_Public\Parameter_public.h" />
+    <ClInclude Include="..\..\Spring_Public\public.h" />
+    <ClInclude Include="..\..\Spring_Public\SysAlarm.h" />
+    <ClInclude Include="..\..\Spring_Public\SysKey.h" />
+    <ClInclude Include="..\..\Spring_Public\SysText.h" />
+    <ClInclude Include="..\..\Spring_Public\Teach_public.h" />
+    <ClInclude Include="..\..\Spring_Public\TestIo_public.h" />
+    <ClInclude Include="..\..\Spring_Public\WorkManage.h" />
+    <ClInclude Include="adt_datatype.h" />
+    <ClInclude Include="AxisRenameDlg.h" />
+    <ClInclude Include="BackzeroDlg.h" />
+    <ClInclude Include="BCMenu.h" />
+    <ClInclude Include="BtnST.h" />
+    <ClInclude Include="ButtonLongPress.h" />
+    <ClInclude Include="CAboutDlg.h" />
+    <ClInclude Include="ColorStatic.h" />
+    <ClInclude Include="ComboBoxCN.h" />
+    <ClInclude Include="Dog.h" />
+    <ClInclude Include="DogDecryptDlg.h" />
+    <ClInclude Include="DogEncryptDlg.h" />
+    <ClInclude Include="GradientStaticEx.h" />
+    <ClInclude Include="IniFileBase.h" />
+    <ClInclude Include="IniLanguage.h" />
+    <ClInclude Include="InputPasswordDlg.h" />
+    <ClInclude Include="InputTextToCharDlg.h" />
+    <ClInclude Include="Language.h" />
+    <ClInclude Include="ListCtrlEx_AxisImage.h" />
+    <ClInclude Include="ListCtrlEx_AxisParamTable.h" />
+    <ClInclude Include="ListCtrlEx_DogPassword.h" />
+    <ClInclude Include="ListCtrlEx_Model.h" />
+    <ClInclude Include="ManufacturerDlg.h" />
+    <ClInclude Include="MenuWithFont.h" />
+    <ClInclude Include="ModelArray.h" />
+    <ClInclude Include="ModelDlg.h" />
+    <ClInclude Include="MyTabCtrl_EmbeddedDialog.h" />
+    <ClInclude Include="Serial.h" />
+    <ClInclude Include="Set1600EIPDlg.h" />
+    <ClInclude Include="SetDestIPDlg.h" />
+    <ClInclude Include="SettingAxisImageDlg.h" />
+    <ClInclude Include="SettingIPDlg.h" />
+    <ClInclude Include="SettingLanguage.h" />
+    <ClInclude Include="SettingSoftwareDlg.h" />
+    <ClInclude Include="SliderCtrlPress.h" />
+    <ClInclude Include="SoftwareParams.h" />
+    <ClInclude Include="CutWireDlg.h" />
+    <ClInclude Include="Data.h" />
+    <ClInclude Include="Definations.h" />
+    <ClInclude Include="CEditEx_CharNum.h" />
+    <ClInclude Include="DiagnoseDlg.h" />
+    <ClInclude Include="GradientStatic.h" />
+    <ClInclude Include="IniSettings.h" />
+    <ClInclude Include="InputNumberDlg.h" />
+    <ClInclude Include="InputTextDlg.h" />
+    <ClInclude Include="ListCellEditBase.h" />
+    <ClInclude Include="ListCellEdit_String.h" />
+    <ClInclude Include="ListCellEdit_Teach.h" />
+    <ClInclude Include="ListCtrlExBase.h" />
+    <ClInclude Include="ListCtrlEx_AxisRename.h" />
+    <ClInclude Include="ListCtrlEx_SettingIO.h" />
+    <ClInclude Include="ListCtrlEx_Settings.h" />
+    <ClInclude Include="ListCtrlEx_Teach.h" />
+    <ClInclude Include="ListCtrlUndoRedo.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="LoggerEx.h" />
+    <ClInclude Include="Modbus\ModbusClient.h" />
+    <ClInclude Include="Modbus\ModbusQueue.h" />
+    <ClInclude Include="Modbus\ModbusTypeDef.h" />
+    <ClInclude Include="Modbus\SocketUdpBase.h" />
+    <ClInclude Include="Modbus\SocketUdpClient.h" />
+    <ClInclude Include="MyTabCtrl_Diag.h" />
+    <ClInclude Include="MyTabCtrl_Settings.h" />
+    <ClInclude Include="ParamTable.h" />
+    <ClInclude Include="RemoteFileExplorer.h" />
+    <ClInclude Include="SettingsDlg.h" />
+    <ClInclude Include="SortHeaderCtrl.h" />
+    <ClInclude Include="SortListCtrl.h" />
+    <ClInclude Include="Spring.h" />
+    <ClInclude Include="SpringDlg.h" />
+    <ClInclude Include="MyTabCtrl.h" />
+    <ClInclude Include="OpenFileDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="StartupDlg.h" />
+    <ClInclude Include="StaticImage.h" />
+    <ClInclude Include="StaticImageAxis.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="UsersDlg.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="WaitingDlg.h" />
+    <ClInclude Include="XIPAddressCtrl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Spring_Public\Parameter_public.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug-offline|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Spring_Public\public.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug-offline|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Spring_Public\SysAlarm.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug-offline|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Spring_Public\SysText.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug-offline|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Spring_Public\TestIo_public.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug-offline|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="AxisRenameDlg.cpp" />
+    <ClCompile Include="BackzeroDlg.cpp" />
+    <ClCompile Include="BCMenu.cpp" />
+    <ClCompile Include="BtnST.cpp" />
+    <ClCompile Include="ButtonLongPress.cpp" />
+    <ClCompile Include="CAboutDlg.cpp" />
+    <ClCompile Include="ColorStatic.cpp" />
+    <ClCompile Include="ComboBoxCN.cpp" />
+    <ClCompile Include="Dog.cpp" />
+    <ClCompile Include="DogDecryptDlg.cpp" />
+    <ClCompile Include="DogEncryptDlg.cpp" />
+    <ClCompile Include="GradientStaticEx.cpp" />
+    <ClCompile Include="IniFileBase.cpp" />
+    <ClCompile Include="IniLanguage.cpp" />
+    <ClCompile Include="InputPasswordDlg.cpp" />
+    <ClCompile Include="InputTextToCharDlg.cpp" />
+    <ClCompile Include="Language.cpp" />
+    <ClCompile Include="ListCtrlEx_AxisImage.cpp" />
+    <ClCompile Include="ListCtrlEx_AxisParamTable.cpp" />
+    <ClCompile Include="ListCtrlEx_DogPassword.cpp" />
+    <ClCompile Include="ListCtrlEx_Model.cpp" />
+    <ClCompile Include="ManufacturerDlg.cpp" />
+    <ClCompile Include="MenuWithFont.cpp" />
+    <ClCompile Include="ModelArray.cpp" />
+    <ClCompile Include="ModelDlg.cpp" />
+    <ClCompile Include="MyTabCtrl_EmbeddedDialog.cpp" />
+    <ClCompile Include="Serial.cpp" />
+    <ClCompile Include="Set1600EIPDlg.cpp" />
+    <ClCompile Include="SetDestIPDlg.cpp" />
+    <ClCompile Include="SettingAxisImageDlg.cpp" />
+    <ClCompile Include="SettingIPDlg.cpp" />
+    <ClCompile Include="SettingLanguage.cpp" />
+    <ClCompile Include="SettingSoftwareDlg.cpp" />
+    <ClCompile Include="SliderCtrlPress.cpp" />
+    <ClCompile Include="SoftwareParams.cpp" />
+    <ClCompile Include="CutWireDlg.cpp" />
+    <ClCompile Include="Data.cpp" />
+    <ClCompile Include="CEditEx_CharNum.cpp" />
+    <ClCompile Include="DiagnoseDlg.cpp" />
+    <ClCompile Include="GradientStatic.cpp" />
+    <ClCompile Include="IniSettings.cpp" />
+    <ClCompile Include="InputNumberDlg.cpp" />
+    <ClCompile Include="InputTextDlg.cpp" />
+    <ClCompile Include="ListCellEditBase.cpp" />
+    <ClCompile Include="ListCellEdit_String.cpp" />
+    <ClCompile Include="ListCellEdit_Teach.cpp" />
+    <ClCompile Include="ListCtrlExBase.cpp" />
+    <ClCompile Include="ListCtrlEx_AxisRename.cpp" />
+    <ClCompile Include="ListCtrlEx_SettingIO.cpp" />
+    <ClCompile Include="ListCtrlEx_Settings.cpp" />
+    <ClCompile Include="ListCtrlEx_Teach.cpp" />
+    <ClCompile Include="ListCtrlUndoRedo.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="LoggerEx.cpp" />
+    <ClCompile Include="Modbus\ModbusClient.cpp" />
+    <ClCompile Include="Modbus\ModbusQueue.cpp" />
+    <ClCompile Include="Modbus\SocketUdpBase.cpp" />
+    <ClCompile Include="Modbus\SocketUdpClient.cpp" />
+    <ClCompile Include="MyTabCtrl_Diag.cpp" />
+    <ClCompile Include="MyTabCtrl_Settings.cpp" />
+    <ClCompile Include="ParamTable.cpp" />
+    <ClCompile Include="RemoteFileExplorer.cpp" />
+    <ClCompile Include="SettingsDlg.cpp" />
+    <ClCompile Include="SortHeaderCtrl.cpp" />
+    <ClCompile Include="SortListCtrl.cpp" />
+    <ClCompile Include="Spring.cpp" />
+    <ClCompile Include="SpringDlg.cpp" />
+    <ClCompile Include="MyTabCtrl.cpp" />
+    <ClCompile Include="OpenFileDlg.cpp" />
+    <ClCompile Include="StartupDlg.cpp" />
+    <ClCompile Include="StaticImage.cpp" />
+    <ClCompile Include="StaticImageAxis.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug-offline|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="UsersDlg.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="WaitingDlg.cpp" />
+    <ClCompile Include="XIPAddressCtrl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Spring.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Spring.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
