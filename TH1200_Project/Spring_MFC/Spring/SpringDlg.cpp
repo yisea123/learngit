@@ -1363,7 +1363,7 @@ LRESULT CSpringDlg::sendModbusQuery(WPARAM wpD, LPARAM lpD)
 
 	counterModbusPending++;
 
-	g_mbq->sendQuery(*mbq_p,true,isPushBack);
+	g_mbq->sendQuery(*mbq_p,true,isPushBack);//放入队列
 
 	delete_pointer(mbq_p);
 	

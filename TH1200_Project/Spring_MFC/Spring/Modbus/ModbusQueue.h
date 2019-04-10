@@ -17,6 +17,7 @@
 
 // C++中的callback函数与tr1用法：https://gist.github.com/lixingcong/35935f6b3e93a2b7e6cb8787c41fae75
 
+//void签名的函数指针 第一个参数为bool型 第二为不确定型指针（赋什么类型就是什么类型）
 typedef std::tr1::function< void (bool, void*) > MB_CALLBACK_FUNC;
 
 typedef enum{
