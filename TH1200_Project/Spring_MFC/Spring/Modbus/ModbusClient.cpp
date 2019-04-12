@@ -200,7 +200,7 @@ bool ModbusClient::funRead01H02H03H04H(INT8U cmd_mode, ModParam *pData, INT8U *p
 		isSendOk=verifySend(pData); //添加校验码并发送
 		if(true==isSendOk)
 		{
-			if(true==verifyRecv(pData) && pData->cmd_mode==cmd_mode)
+			if(true==verifyRecv(pData) && pData->cmd_mode==cmd_mode)//接受一次数据
 			{
 				if(nullptr!=p_socketUdpClient)
 					p_socketUdpClient->close(); // 接收后关闭端口

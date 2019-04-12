@@ -576,7 +576,7 @@ CString CLanguage::getString(std::string key, int section_index)
 void CLanguage::setDialogText(CWnd* context, LANG_ITEM_T* lang_array)
 {
 	auto i=0;
-	while(std::string() != (lang_array+i)->id_str){
+	while(std::string() != (lang_array+i)->id_str){//为最后的停止指令
 		context->GetDlgItem((lang_array+i)->id)->SetWindowText(getString((lang_array+i)->id_str,(lang_array+i)->section_index));
 		i++;
 	}

@@ -25,7 +25,7 @@ UINT ModbusQueue::modbusQueueLoopTaskRun(LPVOID lpPara) // 线程
 
 	bool isOk=false;
 
-	while(1){
+	while(1){//线程循环  直到有read or write 就进行操作
 		if(threadLoopTask_stopCheckRequest(param)){
 			break; // 线程被异步终止
 		}
@@ -51,7 +51,7 @@ UINT ModbusQueue::modbusQueueLoopTaskRun(LPVOID lpPara) // 线程
 
 				// modbus通讯
 				switch(element.operation){
-				case MODBUSQ_OP_READ_DATA:
+				case MODBUSQ_OP_READ_DATA://从下位机读取
 					isOk=p->mb->readData(p->mb_id,element.start_addr,(INT8U*)element.data,element.len,(POLL_RW|POLL_RTU|POLL_WORD));
 					break;
 				case MODBUSQ_OP_WRITE_DATA:
@@ -157,7 +157,7 @@ bool ModbusQueue::init(int COM_index, unsigned int timeout,unsigned int retry_ti
 		mbqlt_param.context=this;
 		mbqlt_param.isNeedAsynchronousKill=true;
 		mbqlt_param.threadLoopTaskRun=&ModbusQueue::modbusQueueLoopTaskRun;
-		threadLoopTask_start(&mbqlt_param);
+		threadLoopTask_start(&mbqlt_param);//调用自定义函数初始化线程
 	}
 
 	query_resume();

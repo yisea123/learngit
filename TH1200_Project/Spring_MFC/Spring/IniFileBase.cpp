@@ -10,7 +10,7 @@
 #include "StdAfx.h"
 #include "IniFileBase.h"
 #include <iostream>
-#include <fstream>
+#include <fstream>//input and output file stream class
 #include <algorithm> // std::remove_if find_if
 
 const std::string comment_prefix="# ";

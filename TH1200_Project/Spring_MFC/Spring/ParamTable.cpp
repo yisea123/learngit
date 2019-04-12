@@ -79,18 +79,18 @@ bool ParamTable::queryAllParams()
 
 	mbq.operation=MODBUSQ_OP_READ_DATA;
 
-	for(size_t tabIndex=0;tabIndex<getTitleArraySize();++tabIndex){
+	for(size_t tabIndex=0;tabIndex<getTitleArraySize();++tabIndex){//获取每一个title
 		auto pt=getTitleArrayItem(tabIndex);
 
-		auto paraRegTableIndex=pt->startIndex+1;
-		auto paraRegTableIndexEnd=paraRegTableIndex+pt->count;
+		auto paraRegTableIndex=pt->startIndex+1;//开始向没有用，需要+1
+		auto paraRegTableIndexEnd=paraRegTableIndex+pt->count;//count是个数（即总数）
 
-		while(true == isOk && paraRegTableIndex < paraRegTableIndexEnd){
+		while(true == isOk && paraRegTableIndex < paraRegTableIndexEnd){//取出 数据、长度、地址
 			mbq.data=ParaRegTab[paraRegTableIndex].pData;
 			mbq.len=getSizeFromDataType(ParaRegTab[paraRegTableIndex].DataType);
 			mbq.start_addr=ParaRegTab[paraRegTableIndex].PlcAddr;
 
-			isOk=g_mbq->sendQuery(mbq,false);
+			isOk=g_mbq->sendQuery(mbq,false);//往后发送队列
 
 			//debug_printf("read p=%d\n",paraRegTableIndex);
 			++paraRegTableIndex; // next one		

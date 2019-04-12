@@ -1865,7 +1865,7 @@ LRESULT CSpringDlg::onUpdateAlarmMsg(WPARAM wpD, LPARAM lpD)
 
 	if(logLevel>=0){
 		USES_CONVERSION;
-		g_logger->log(logLevel,W2A(msg));
+		g_logger->log(logLevel,W2A(msg));//
 	}
 
 	return LRESULT();

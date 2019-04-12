@@ -91,7 +91,7 @@ void CSettingSoftwareDlg::OnOK()
 
 void CSettingSoftwareDlg::refreshLanguageUI()
 {
-	CLanguage::LANG_ITEM_T dialog_items[]={
+	CLanguage::LANG_ITEM_T dialog_items[]={//把需要设置的变成一个数组
 		{LANGUAGE_MAP_ID(IDC_STATIC_SETTING_SW_HINT), CLanguage::SECT_DIALOG_SETTINGSOFTWARE},
 		{LANGUAGE_MAP_ID(IDC_CHECK_SETTING_SW_LOG), CLanguage::SECT_DIALOG_SETTINGSOFTWARE},
 		{LANGUAGE_MAP_ID(IDC_CHECK_SETTING_SW_EXITHINT), CLanguage::SECT_DIALOG_SETTINGSOFTWARE},
@@ -101,8 +101,8 @@ void CSettingSoftwareDlg::refreshLanguageUI()
 		{0,std::string()} // stop
 	};
 
-	g_lang->setDialogText(this,dialog_items);
+	g_lang->setDialogText(this,dialog_items);//一条一条设置  知道stop
 
-	SetWindowText(g_lang->getString("TITLE", CLanguage::SECT_DIALOG_SETTINGSOFTWARE)); // "软件设置"));
-	GetDlgItem(IDOK)->SetWindowText(g_lang->getCommonText(CLanguage::LANG_BUTTON_SAVE));
+	SetWindowText(g_lang->getString("TITLE", CLanguage::SECT_DIALOG_SETTINGSOFTWARE)); // 设置标题"软件设置";
+	GetDlgItem(IDOK)->SetWindowText(g_lang->getCommonText(CLanguage::LANG_BUTTON_SAVE));//设置ok按键  为保存
 }

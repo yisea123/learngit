@@ -159,7 +159,7 @@ UINT CStartupDlg::queryTask(LPVOID lpPara)
 		break;
 
 	case WS_READ_SETTINGS:
-		isQueryOk=g_paramTable->queryAllParams();
+		isQueryOk=g_paramTable->queryAllParams();//从下位机 取出数据
 		break;
 
 	case WS_READ_MODELS:
