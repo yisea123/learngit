@@ -1,0 +1,12 @@
+首先安装打包软件：Inno Setup
+http://www.jrsoftware.org/isinfo.php
+
+在VS2010工程中选择Release编译好Spring.exe，后面将其打包到安装包
+
+进入SpringInstallation文件夹
+1 编写ReleaseNote.txt的更新日志
+2 双击Spring.iss（或者其它厂商的iss脚本）
+3 更新版本号 AppVersion=1.x.x
+4 Compile这个ISS文件
+5 在Output下可以获得安装包
+

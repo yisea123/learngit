@@ -1,0 +1,707 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Dialogs">
+      <UniqueIdentifier>{93fe96a4-3d0c-4031-a442-beeba9eb64d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Views">
+      <UniqueIdentifier>{3c655c48-8abb-4de0-9a12-21be3ae34ce5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data">
+      <UniqueIdentifier>{c4264100-9413-41b1-af01-62409ef07844}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Spring_Public">
+      <UniqueIdentifier>{ab40d430-0220-4517-8470-9b1f7d66b46e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Modbus">
+      <UniqueIdentifier>{9d8c21a4-33a4-4e6b-b2c5-1c8c887740aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Includes">
+      <UniqueIdentifier>{b3dbfb32-9ca4-4359-a3b5-75ba763b2107}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\Spring.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Spring.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\start.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\fileopen.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\filesave.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\backzero.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\single.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\stop.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\backknife.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\cutwire.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\handmove.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\test.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\checkio.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\icon2.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\handmove-off.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\io_status_0.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\io_status_1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\reset-alarm.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\test-off.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\sample.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\chanxian_0.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\chanxian_1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\duanxian_0.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\duanxian_1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\paoxian_0.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\paoxian_1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\set-origin.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\work-speed.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\stop_extern_0.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\stop_extern_1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\stop_handmove_0.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\stop_handmove_1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\probe_status_0.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\probe_status_1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\logic_false.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\logic_true.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\model1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\model2.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\model3.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\model4.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\models.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\checkbox_checked.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-probe\checkbox_unchecked.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\danbu.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons-top\danbu_off.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ComboBoxCN.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Definations.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="MyTabCtrl.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenFileDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="InputTextDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="CEditEx_CharNum.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="Spring.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpringDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="BCMenu.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="BtnST.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="Modbus\ModbusClient.h">
+      <Filter>Source Files\Modbus</Filter>
+    </ClInclude>
+    <ClInclude Include="Modbus\ModbusTypeDef.h">
+      <Filter>Source Files\Modbus</Filter>
+    </ClInclude>
+    <ClInclude Include="Modbus\SocketUdpBase.h">
+      <Filter>Source Files\Modbus</Filter>
+    </ClInclude>
+    <ClInclude Include="Modbus\SocketUdpClient.h">
+      <Filter>Source Files\Modbus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Spring_Public\public.h">
+      <Filter>Source Files\Spring_Public</Filter>
+    </ClInclude>
+    <ClInclude Include="CAboutDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="adt_datatype.h">
+      <Filter>Source Files\Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="Modbus\ModbusQueue.h">
+      <Filter>Source Files\Modbus</Filter>
+    </ClInclude>
+    <ClInclude Include="DiagnoseDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlEx_Teach.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlExBase.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCellEditBase.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCellEdit_Teach.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlEx_Settings.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="MyTabCtrl_Settings.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingsDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Spring_Public\SysText.h">
+      <Filter>Source Files\Spring_Public</Filter>
+    </ClInclude>
+    <ClInclude Include="MyTabCtrl_Diag.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlUndoRedo.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonLongPress.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Spring_Public\ManualMotion.h">
+      <Filter>Source Files\Spring_Public</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteFileExplorer.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Spring_Public\WorkManage.h">
+      <Filter>Source Files\Spring_Public</Filter>
+    </ClInclude>
+    <ClInclude Include="SortHeaderCtrl.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="SortListCtrl.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Spring_Public\SysKey.h">
+      <Filter>Source Files\Spring_Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Spring_Public\SysAlarm.h">
+      <Filter>Source Files\Spring_Public</Filter>
+    </ClInclude>
+    <ClInclude Include="GradientStatic.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Spring_Public\Parameter_public.h">
+      <Filter>Source Files\Spring_Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Spring_Public\TestIo_public.h">
+      <Filter>Source Files\Spring_Public</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticImage.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="InputNumberDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="StartupDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorStatic.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="WaitingDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="LoggerEx.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlEx_SettingIO.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCellEdit_String.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="ParamTable.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="AxisRenameDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlEx_AxisRename.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Spring_Public\Teach_public.h">
+      <Filter>Source Files\Spring_Public</Filter>
+    </ClInclude>
+    <ClInclude Include="CutWireDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="IniSettings.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftwareParams.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="SliderCtrlPress.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="BackzeroDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="XIPAddressCtrl.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="SetDestIPDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Set1600EIPDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingIPDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="MyTabCtrl_EmbeddedDialog.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="UsersDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="InputPasswordDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Spring_Public\Dog_public.h">
+      <Filter>Source Files\Spring_Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Dog.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="DogDecryptDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlEx_DogPassword.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="DogEncryptDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="InputTextToCharDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingSoftwareDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticImageAxis.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="ManufacturerDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="IniLanguage.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="IniFileBase.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Language.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="GradientStaticEx.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingLanguage.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelArray.h">
+      <Filter>Source Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlEx_Model.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="Serial.h">
+      <Filter>Source Files\Modbus</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingAxisImageDlg.h">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlEx_AxisImage.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Spring_Public\modbusAddress.h">
+      <Filter>Source Files\Modbus</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuWithFont.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="ListCtrlEx_AxisParamTable.h">
+      <Filter>Source Files\Views</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ComboBoxCN.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="MyTabCtrl.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenFileDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="InputTextDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="CEditEx_CharNum.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="Spring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpringDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="BCMenu.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="BtnST.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="Modbus\ModbusClient.cpp">
+      <Filter>Source Files\Modbus</Filter>
+    </ClCompile>
+    <ClCompile Include="Modbus\SocketUdpBase.cpp">
+      <Filter>Source Files\Modbus</Filter>
+    </ClCompile>
+    <ClCompile Include="Modbus\SocketUdpClient.cpp">
+      <Filter>Source Files\Modbus</Filter>
+    </ClCompile>
+    <ClCompile Include="CAboutDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Modbus\ModbusQueue.cpp">
+      <Filter>Source Files\Modbus</Filter>
+    </ClCompile>
+    <ClCompile Include="DiagnoseDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlEx_Teach.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlExBase.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCellEditBase.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCellEdit_Teach.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlEx_Settings.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="MyTabCtrl_Settings.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingsDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Spring_Public\SysText.c">
+      <Filter>Source Files\Spring_Public</Filter>
+    </ClCompile>
+    <ClCompile Include="MyTabCtrl_Diag.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlUndoRedo.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonLongPress.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteFileExplorer.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="SortHeaderCtrl.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="SortListCtrl.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Spring_Public\SysAlarm.c">
+      <Filter>Source Files\Spring_Public</Filter>
+    </ClCompile>
+    <ClCompile Include="GradientStatic.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Spring_Public\public.c">
+      <Filter>Source Files\Spring_Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Spring_Public\Parameter_public.c">
+      <Filter>Source Files\Spring_Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Spring_Public\TestIo_public.c">
+      <Filter>Source Files\Spring_Public</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticImage.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="InputNumberDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="StartupDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorStatic.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="WaitingDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="LoggerEx.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlEx_SettingIO.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCellEdit_String.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="ParamTable.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="AxisRenameDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlEx_AxisRename.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="CutWireDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="IniSettings.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftwareParams.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="SliderCtrlPress.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="BackzeroDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="XIPAddressCtrl.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="SetDestIPDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Set1600EIPDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingIPDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="MyTabCtrl_EmbeddedDialog.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="UsersDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="InputPasswordDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dog.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="DogDecryptDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlEx_DogPassword.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="DogEncryptDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="InputTextToCharDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingSoftwareDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticImageAxis.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="ManufacturerDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="IniLanguage.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="IniFileBase.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Language.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="GradientStaticEx.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingLanguage.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelArray.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlEx_Model.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="Serial.cpp">
+      <Filter>Source Files\Modbus</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingAxisImageDlg.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlEx_AxisImage.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuWithFont.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="ListCtrlEx_AxisParamTable.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Spring.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

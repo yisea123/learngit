@@ -1,0 +1,14 @@
+test*.xml
+*.rar
+*.zip
+*.7z
+Debug/
+bootimage/*
+!bootimage/ZYNQ_TEST_PROJECT.bif
+TEST_Image/*.bin
+!MOTION_LIB/Motion/Motion.bin
+
+*.o
+*.d
+*.bak
+
