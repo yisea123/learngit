@@ -164,7 +164,7 @@ void CStaticImageAxis::drawPicture_wanneng(int x, int y, int width, int height)
 	
 	// 八个轴依次画出来
 	for(int axis=1;axis<=m_prop->axis_count;axis++){
-		// 圆：电机(尾巴那个大点)
+		// 圆：电机
 		radius=20 * m_scale_ratio;
 		m_graph->FillEllipse(&BRUSH_CIRCLE_SERVO1, (int)(m_pos_center[0]-radius/2), (int)(m_pos_center[1]-radius/2-CONST_OFFSET_Y_CIRCLE_SERVO * m_scale_ratio), (int)radius, (int)radius);
 		radius=8 * m_scale_ratio;
@@ -179,7 +179,7 @@ void CStaticImageAxis::drawPicture_wanneng(int x, int y, int width, int height)
 			points[2*GDI_MAX_POINTS-i-1].Y=m_pos_center[1]-(CONST_SOCKET_POSTIONS[i][1] * m_scale_ratio);
 		}
 
-		// Fill the polygon.多边形(黑底)
+		// Fill the polygon.
 		m_graph->FillPolygon(&BRUSH_SOCKET, points, GDI_MAX_POINTS * 2);
 
 		// 轨道(画两条线)
@@ -232,7 +232,7 @@ void CStaticImageAxis::drawPicture_wanneng(int x, int y, int width, int height)
 			m_graph->FillPolygon(&BRUSH_DAOJIA, points, POINTS_DAOJIA_PER_SIZE * 2);
 		}
 
-		// 刀架连接电机
+		// 刀架连接尾轴
 		p1.X=m_pos_center[0];
 		p1.Y=points[POINTS_DAOJIA_PER_SIZE-1].Y;
 		p2.X=m_pos_center[0];

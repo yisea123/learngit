@@ -197,8 +197,8 @@ bool CListCellEdit_Teach::isValidMove(int col, CString nowText, CString& goodTex
 				return false;
 			}
 
-			if(val>100|| val<-100){
-				err_string=g_lang->getString("ERR_INVALID_RANGE_MULTI_2", CLanguage::SECT_ERRORS_TEACHING_2); // "错误：多圈模式圈数有效范围为-100~100");
+			if(val>200|| val<-200){//2019 4.12 cj
+				err_string=g_lang->getString("ERR_INVALID_RANGE_MULTI_2", CLanguage::SECT_ERRORS_TEACHING_2); // "错误：多圈模式圈数有效范围为-200~200");
 				return false;
 			}
 

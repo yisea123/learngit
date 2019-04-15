@@ -162,6 +162,7 @@
     <None Include="res\icons-probe\checkbox_unchecked.ico" />
     <None Include="res\icons-probe\duanxian_0.ico" />
     <None Include="res\icons-probe\duanxian_1.ico" />
+    <None Include="res\icons-probe\icon10.ico" />
     <None Include="res\icons-probe\io_status_0.ico" />
     <None Include="res\icons-probe\io_status_1.ico" />
     <None Include="res\icons-probe\logic_false.ico" />
@@ -180,6 +181,7 @@
     <None Include="res\icons-top\cutwire.ico" />
     <None Include="res\icons-top\danbu.ico" />
     <None Include="res\icons-top\danbu_off.ico" />
+    <None Include="res\icons-top\exstop.ico" />
     <None Include="res\icons-top\fileopen.ico" />
     <None Include="res\icons-top\filesave.ico" />
     <None Include="res\icons-top\handmove-off.ico" />

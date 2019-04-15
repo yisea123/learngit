@@ -10,7 +10,7 @@
 #include "StdAfx.h"
 #include "IniFileBase.h"
 #include <iostream>
-#include <fstream>//input and output file stream class
+#include <fstream>
 #include <algorithm> // std::remove_if find_if
 
 const std::string comment_prefix="# ";
@@ -116,7 +116,7 @@ bool CIniFileBase::save()
 {
 	thread_lock(&cs_write);
 
-	std::ofstream out_file (filename.c_str());
+	std::ofstream out_file (filename.c_str());//已需要的形式返回字符串
 	if (!out_file.is_open())
 		return false;
 

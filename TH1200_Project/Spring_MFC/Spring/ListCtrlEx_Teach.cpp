@@ -1683,8 +1683,8 @@ void CListCtrlEx_Teach::getColumnHintString(int col)
 				m_err_string+=_T("-360~360");
 			}
 			break;
-		case 1: // 多圈
-			m_err_string=g_lang->getString("HINT_MULTI", CLanguage::SECT_ERRORS_TEACHING_1); // "多圈模式：输入范围-100~100(圈)，四位小数点");
+		case 1: // 多圈 2019.4.12 cj
+			m_err_string=g_lang->getString("HINT_MULTI", CLanguage::SECT_ERRORS_TEACHING_1); // "多圈模式：输入范围-200~200(圈)，四位小数点");
 			break;
 		case 2: // 丝杆
 			m_err_string=g_lang->getString("HINT_SCREW", CLanguage::SECT_ERRORS_TEACHING_1); // "丝杆模式：输入范围-999999~1999999");

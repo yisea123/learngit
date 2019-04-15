@@ -60,7 +60,6 @@ BOOL CAboutDlg::OnInitDialog()
 	mbq_p.start_addr=MODBUS_ADDR_CONTROLER_VERSION;
 	mbq_p.len=sizeof(TH_1600E_VER);
 	mbq_p.data=&th_1600e_ver;
-	//初始化调用回调函数 初始化回调线程
 	mbq_p.callback=std::tr1::bind( &CAboutDlg::callback ,this, std::tr1::placeholders::_1, std::tr1::placeholders::_2);
 	g_mbq->sendQuery(mbq_p);
 

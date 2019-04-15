@@ -110,7 +110,9 @@ public:
 
 	// 设置popup菜单的函数 lixingcong@20180316，注意传入的max_count用于限制数组越界
 	void setMenuPopupText(CMenu* menu, LANG_ITEM_T* lang_array, int max_count);
-
+	
+	//启动以后设置按键名函数
+	void CLanguage::setTopoption();
 	// 根据报警号获取报警文本
 	CString getAlarmMsg(int alarmNumber);
 

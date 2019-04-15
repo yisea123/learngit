@@ -26,7 +26,7 @@ Logger::~Logger(void)
 	DeleteCriticalSection(&m_Mutex);
 }
 
-void Logger::writeLine(std::string& levelMsg, std::string& msg)//写日志
+void Logger::writeLine(std::string& levelMsg, std::string& msg)
 {
 	EnterCriticalSection(&m_Mutex);
 
@@ -47,7 +47,7 @@ void Logger::writeLine(std::string& levelMsg, std::string& msg)//写日志
 	LeaveCriticalSection(&m_Mutex);
 }
 
-void Logger::log(int logLevel, std::string msg)//把信息写入日志  日志级别 日志信息 
+void Logger::log(int logLevel, std::string msg)
 {
 	if(isEnableLogger)
 		writeLine(getLogLevelMsg(logLevel),msg);

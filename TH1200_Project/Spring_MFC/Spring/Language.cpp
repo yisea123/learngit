@@ -439,7 +439,7 @@ const CLanguage::LANG_KEY_VAL_T CLanguage::DEFAULT_TEXTS[]={
 	{SECT_ERRORS_TEACHING_1, "ERR_UNKNOWN_CMD", "未知的教导指令"},
 	{SECT_ERRORS_TEACHING_1, "ERR_MOVE_SAME_LINE_S_PLUS", "错误：\"+\",\"-\",\"S\"指令和探针不能同时存在于MOVE指令行"},
 	{SECT_ERRORS_TEACHING_1, "HINT_SINGLE", "单圈模式：输入范围"},
-	{SECT_ERRORS_TEACHING_1, "HINT_MULTI", "多圈模式：输入范围-100~100(圈)，四位小数点"},
+	{SECT_ERRORS_TEACHING_1, "HINT_MULTI", "多圈模式：输入范围-200~200(圈)，四位小数点"},
 	{SECT_ERRORS_TEACHING_1, "HINT_SCREW", "丝杆模式：输入范围-999999~1999999"},
 	{SECT_ERRORS_TEACHING_1, "HINT_FEED", "送线模式：输入范围-999999~1999999"},
 	{SECT_ERRORS_TEACHING_1, "HINT_CMD_TYPE", "M:运动, E:结束, S:速度, J/G:跳转, L:循环, N:标志"},
@@ -576,7 +576,7 @@ CString CLanguage::getString(std::string key, int section_index)
 void CLanguage::setDialogText(CWnd* context, LANG_ITEM_T* lang_array)
 {
 	auto i=0;
-	while(std::string() != (lang_array+i)->id_str){//为最后的停止指令
+	while(std::string() != (lang_array+i)->id_str){
 		context->GetDlgItem((lang_array+i)->id)->SetWindowText(getString((lang_array+i)->id_str,(lang_array+i)->section_index));
 		i++;
 	}
@@ -585,12 +585,16 @@ void CLanguage::setDialogText(CWnd* context, LANG_ITEM_T* lang_array)
 void CLanguage::setMenuText(CMenu* menu, LANG_ITEM_T* lang_array)
 {
 	auto i=0;
+
 	while(std::string() != (lang_array+i)->id_str){
 		CString* got_str=new CString(getString((lang_array+i)->id_str,(lang_array+i)->section_index));
 		menuStrings.push_back(got_str);
 		menu->ModifyMenu((lang_array+i)->id,MF_BYCOMMAND | MF_OWNERDRAW,(lang_array+i)->id,(LPCTSTR)got_str);
 		i++;
 	}
+
+
+
 }
 
 void CLanguage::setMenuPopupText(CMenu* menu, LANG_ITEM_T* lang_array, int max_count)
@@ -650,15 +654,24 @@ void CLanguage::_initSectionArray()
 void CLanguage::_initDiaglogTexts()
 {
 	const LANG_KEY_VAL_T* item;
-
 	for(item=&CLanguage::DEFAULT_TEXTS[0]; item->section_index >= 0 ; ++item){
 		if(item->section_index >= SECT_MAX_INDEX){
 			debug_printf("CLanguage::_initAllString(): wrong index, skip\n");
 			continue;
 		}
-		
 		iniLang->get_language_string(item->key,*_section_indexes[item->section_index],item->value);
 	}
+	
+}
+
+void CLanguage::setTopoption()//2019/4 cj
+{
+	/**************************要在参数加载后修改************************************/
+	auto offset=g_Sysparam.iTapMachineCraft;//设置启动按键为继续标志
+	if(offset)
+		iniLang->set_language_string(LANGUAGE_STR(IDC_BUTTON_RUN),*_section_indexes[SECT_DIALOG_SPRING],"继续(F4)");
+	/********************************************************************************/
+
 }
 
 void CLanguage::_initMapTexts()

@@ -37,6 +37,8 @@
 #include "SysText.h"
 #include "SysKey.h"
 #include "SysAlarm.h"
+#include <IniLanguage.h>
+#include <Language.h>
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -646,8 +648,12 @@ void CSpringDlg::OnBnClickedButtonOpenfile()
 
 void CSpringDlg::initButtonsTop()
 {
+
 	short shBtnColor = 30;
-	
+	auto offset=g_Sysparam.iTapMachineCraft;//设置启动按键为继续标志
+	g_lang->CLanguage::setTopoption();
+	debug_printf("workdata%d\n",offset);
+
 	auto set_button_icon=[shBtnColor](CButtonST& btn, int icon_id, int h, int w){
 		btn.SetIcon(icon_id,h,w);
 		btn.OffsetColor(CButtonST::BTNST_COLOR_BK_IN, shBtnColor);
@@ -661,7 +667,9 @@ void CSpringDlg::initButtonsTop()
 	set_button_icon(m_button_set_origin,IDI_ICON_SET_ORIGIN,ICON_HEIGHT,ICON_WIDTH);
 	set_button_icon(m_button_backzero,IDI_ICON_BACKZERO,ICON_HEIGHT,ICON_WIDTH);
 	set_button_icon(m_button_single,IDI_ICON_SINGLE,ICON_HEIGHT,ICON_WIDTH);
-	set_button_icon(m_button_start,IDI_ICON_START,ICON_HEIGHT,ICON_WIDTH);
+
+	set_button_icon(m_button_start,offset?IDI_ICON_EXSTOP:IDI_ICON_START,ICON_HEIGHT,ICON_WIDTH);//2019/4/12 cj
+
 	set_button_icon(m_button_stop,IDI_ICON_STOP,ICON_HEIGHT,ICON_WIDTH);
 	set_button_icon(m_button_test,(g_bMode?IDI_ICON_TEST:IDI_ICON_TEST_OFF),ICON_HEIGHT,ICON_WIDTH);
 	set_button_icon(m_button_danbu,(g_bStepRunMode?IDI_ICON_DANBU:IDI_ICON_DANBU_OFF),ICON_HEIGHT,ICON_WIDTH);
@@ -1363,7 +1371,7 @@ LRESULT CSpringDlg::sendModbusQuery(WPARAM wpD, LPARAM lpD)
 
 	counterModbusPending++;
 
-	g_mbq->sendQuery(*mbq_p,true,isPushBack);//放入队列
+	g_mbq->sendQuery(*mbq_p,true,isPushBack);
 
 	delete_pointer(mbq_p);
 	
@@ -1865,7 +1873,7 @@ LRESULT CSpringDlg::onUpdateAlarmMsg(WPARAM wpD, LPARAM lpD)
 
 	if(logLevel>=0){
 		USES_CONVERSION;
-		g_logger->log(logLevel,W2A(msg));//
+		g_logger->log(logLevel,W2A(msg));
 	}
 
 	return LRESULT();
