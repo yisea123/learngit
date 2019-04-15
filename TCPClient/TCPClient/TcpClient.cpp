@@ -1,6 +1,7 @@
 #include <winsock2.h>
 #include <stdio.h>
 
+
 void main()
 {
 	//加载套接字库
@@ -10,7 +11,6 @@ void main()
 
 	wVrsionRequested = MAKEWORD(1,1);
 	err = WSAStartup( wVrsionRequested,&wsaData);//加载库返回版本信息
-
 	if(err!=0)
 	{
 		return;
@@ -36,7 +36,7 @@ void main()
 	char recvBuf[100];
 	//接受数据
 	recv(sockClient,recvBuf,100,0);
-	sprintf("%s\n",recvBuf);//返回IP地址
+	printf("%s\n",recvBuf);//返回IP地址
 	//发送数据
 	send(sockClient,"this is lisi",strlen("this is lisi")+1,0);
 
@@ -44,7 +44,7 @@ void main()
 	closesocket(sockClient);
 	WSACleanup();
 
-
+	system("Pause");
 
 
 }
