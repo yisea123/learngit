@@ -31,7 +31,7 @@ void main()
 	SOCKET sockSrv = socket(AF_INET,SOCK_DGRAM,0);
  
 	sockaddr_in  addrSrv;
-	addrSrv.sin_addr.S_un.S_addr = inet_addr("127.0.0.1");
+	addrSrv.sin_addr.S_un.S_addr = inet_addr("192.168.9.109");
 	addrSrv.sin_family = AF_INET;
 	addrSrv.sin_port = htons(6000);
 	
