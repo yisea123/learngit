@@ -1,0 +1,32 @@
+﻿生成启动时间为 2019/4/16 星期二 下午 3:01:51。
+     1>项目“C:\Users\Administrator\Documents\Visual Studio 2010\Projects\CHAT\CHAT\CHAT.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\CHAT.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\CHAT.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt CHATDlg.cpp
+         CHATDlg.cpp
+       ResourceCompile:
+         所有输出均为最新。
+       ManifestResourceCompile:
+         所有输出均为最新。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Documents\Visual Studio 2010\Projects\CHAT\Debug\CHAT.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\CHAT.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Administrator\Documents\Visual Studio 2010\Projects\CHAT\Debug\CHAT.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\Documents\Visual Studio 2010\Projects\CHAT\Debug\CHAT.lib" /MACHINE:X86 Debug\CHAT.res
+         Debug\CHAT.exe.embed.manifest.res
+         Debug\CHAT.obj
+         Debug\CHATDlg.obj
+         Debug\stdafx.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\CHAT.exe.embed.manifest" /manifest Debug\CHAT.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         所有输出均为最新。
+       LinkEmbedManifest:
+         所有输出均为最新。
+         CHAT.vcxproj -> C:\Users\Administrator\Documents\Visual Studio 2010\Projects\CHAT\Debug\CHAT.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\CHAT.unsuccessfulbuild”。
+         正在对“Debug\CHAT.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Users\Administrator\Documents\Visual Studio 2010\Projects\CHAT\CHAT\CHAT.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.91
